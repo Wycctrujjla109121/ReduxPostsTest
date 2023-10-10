@@ -1,0 +1,141 @@
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    padding: 20px 10px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+
+        &_span {
+            font-weight: bold;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        text-align: justify;
+
+        width: 100%;
+        max-width: 350px;
+    }
+
+    &__error {
+        color: red;
+
+        font-size: 24px;
+    }
+
+    &__open {
+        padding: 8px 10px;
+        border: 1px solid #fff;
+        border-radius: 18px;
+
+        background-color: #000;
+
+        font-size: 24px;
+        color: #fff;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:hover {
+            background-color: #fff;
+
+            border-color: #000;
+
+            color: #000;
+        }
+
+        &:active {
+            scale: 1.1;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    &__open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &__input {
+        width: 100%;
+
+        border: none;
+        outline: none;
+
+        border-bottom: 1px solid #676666;
+
+        padding: 5px;
+
+
+        &::placeholder {
+            transition: .3s;
+            color: #000;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    &__submit {
+        padding: 8px 12px;
+
+        border-radius: 10px;
+
+        border: 1px solid aqua;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+            box-shadow: 0px 0px 10px 0px rgba(11, 54, 244, 0.1);
+
+            scale: 1.1;
+        }
+    }
+}
